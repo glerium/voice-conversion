@@ -8,7 +8,9 @@
 - 音频重建层：将映射后的特征重构为音频信号
 
 # 部署方式
+- 部署环境：Python 3.12、MATLAB R2024a
+- 执行 `pip install -r requirements.txt` 安装必要依赖库
 - 将 `data.zip` 解压至 `./data/train/` 文件夹下
 - 用MATLAB运行 `generate_data.m` 文件，通过原始音频构造梅尔频谱图特征；此时目录下会生成 `train_data.mat` 文件
 - 用Python运行 `train.py` 文件，模型开始训练，训练完毕后自动将音频特征保存至 `output.mat` 文件
-- 运行 `reconstruct.py` ，将输出特征重构为音频文件，默认输出至 `output` 文件夹
+- 运行 `reconstruct.py` ，将输出特征重构为音频文件，结果将输出至 `output` 文件夹
