@@ -149,3 +149,6 @@ plt.xlabel('Epoch')
 plt.ylabel('Loss')
 plt.legend()
 plt.savefig('loss.jpg')
+
+# 将测试集输出保存到文件
+scipy.io.savemat('output.mat', {'output': y_pred.cpu().detach().numpy()})
